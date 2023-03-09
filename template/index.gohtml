@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="/static/css/style.css">
+<script type="text/javascript" src="/static/js/script.js"></script>
+    <title>To Do
+    </title>
+</head>
+
+<body>
+    <h1> {{.Title}}</h1>
+    <ul>
+{{ range .Todos }}
+{{if .Done}}
+<li class="done"> {{.Item}}</li>
+{{else}}
+<li> {{.Item}}</li>
+{{ end }}
+{{ end }}
+</ul>
+</body>
+
+</html>
